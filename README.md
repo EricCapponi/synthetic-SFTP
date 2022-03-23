@@ -11,7 +11,7 @@ The following secure credentials are used byt his script:
 - SFTPUSER          required    The sftp user name
 - SFTPPASSWORD      optional    Sets the user's password, may be omitted if private key is set
 - SFTPPKEY          optional    Sets the user's private key, may be omitted id password is set 
-    - The key bust be converted as save as base64
+    - The key must be converted and saved as base64
 - LOGGINGACCOUNT    required    The New Relic account to log events to
 - INGESTAPIKEY      required    The New Relic API Ingest key for thelogging account
 
