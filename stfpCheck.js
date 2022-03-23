@@ -10,7 +10,7 @@ const cHost = $secure.SFTPHOST
 const cPort = '22'
 const cUsername = $secure.SFTPUSER
 const cPassword = $secure.SFTPPASSWORD
-const cPrivateKey = $secure.SFTPPKEY
+const cRawKey = $secure.SFTPPKEY
 const loggingAccount = $secure.LOGGINGACCOUNT
 const ingestKey = $secure.INGESTAPIKEY
 // The eventType defines which NRDB table the data is written to
@@ -38,8 +38,9 @@ var eventAPIcallOptions = {
     body: null
   }
 
-if (cPrivateKey) {
-    connectObject.privateKey = cPrivateKey
+if (cRawKey) {
+  const buff = new Buffer.from($secure.GCP_SERVICEACCOUNT_KEY, 'base64');
+  connectObject.privateKey = buff.toString("utf-8");
 } else {
     connectObject.password = cPassword
 }
