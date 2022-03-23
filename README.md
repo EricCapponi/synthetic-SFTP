@@ -22,6 +22,6 @@ Synthetic run status:<br>
 FROM SyntheticCheck SELECT count(*) FACET result since 1 day ago
 
 SFTP Check pass/fail: (assumes eventType = 'synCheck')<br>
-FROM synCheck SELECT count(*) FACET sftp.connect SINCE 1 DAY AG
+FROM synCheck SELECT count(*) FACET sftp.connect SINCE 1 DAY AGO
 
 

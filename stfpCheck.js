@@ -82,7 +82,7 @@ sftp.connect(connectObject)
         eventType: eventType,
         'sftp.site': cHost,
         'sftp.connect': 'failure',
-        'stfp.error': error.code + ":" + error.message
+        'sftp.error': error.code + ":" + error.message
       }
     sendEvent(payload)
 })
