@@ -1,6 +1,8 @@
 # Synthetic SFTP test
 
-This script test an SFTP site by simply logging into it. Events are posted to table named by the eventType variable. The script assumes port 22 and is set by the cPort constant.
+This script test an SFTP site by simply logging into it.<br>
+Events are posted to table named by the eventType variable.<br> 
+The script assumes port 22 and is set by the cPort constant.
 
 ## Secure Credentials
 
@@ -19,7 +21,7 @@ NOTE: Either password or private key must be set
 Synthetic run status:
 FROM SyntheticCheck SELECT count(*) FACET result since 1 day ago
 
-SFTP Check pass/fail: (assumes eventType = 'synCheck')
+SFTP Check pass/fail: (assumes eventType = 'synCheck')<br>
 FROM synCheck SELECT count(*) FACET sftp.connect SINCE 1 DAY AG
 
 
