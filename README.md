@@ -18,7 +18,7 @@ NOTE: Either password or private key must be set
 
 ## NRQL
 
-Synthetic run status:
+Synthetic run status:<br>
 FROM SyntheticCheck SELECT count(*) FACET result since 1 day ago
 
 SFTP Check pass/fail: (assumes eventType = 'synCheck')<br>
